@@ -31,7 +31,7 @@ async def gp(message):
        await message.answer("Sorry, all I do is scrape GPLinks URLs :(")
        return
     m = await message.answer("Please wait...")
-    link = get_link(message.text)
+    link = await get_link(message.text)
     await m.delete()
     if not link:      
        await message.answer("Something went wrong\nTry again later..")
